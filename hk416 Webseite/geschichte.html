@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HK416 – Geschichte (Interaktive Version)</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+font-family:'Roboto',sans-serif;
+background:#070b10;
+color:white;
+line-height:1.8;
+}
+
+h1,h2,h3{font-family:'Orbitron',sans-serif;}
+
+section{padding:100px 12%;}
+
+/* NAVBAR */
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:rgba(0,0,0,0.9);
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:22px 12%;
+z-index:1000;
+border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+nav h1{color:#00ff88;font-size:22px;}
+nav ul{display:flex;gap:35px;list-style:none;}
+nav a{text-decoration:none;color:white;font-size:15px;transition:0.3s;}
+nav a:hover{color:#00ff88;}
+
+/* HERO */
+.hero{
+height:90vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:url("bilder/hk4165.jpg") center/cover no-repeat;
+position:relative;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.7);
+}
+
+.hero h1{font-size:65px;position:relative;animation:fadeIn 1.5s ease forwards;}
+.hero p{max-width:900px;font-size:20px;position:relative;animation:fadeIn 2.5s ease forwards;}
+
+@keyframes fadeIn{
+from{opacity:0;transform:translateY(40px);} 
+to{opacity:1;transform:translateY(0);} 
+}
+
+/* TEXT + IMAGE */
+.block{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:70px;
+align-items:center;
+margin-top:60px;
+}
+
+.block img{
+width:100%;
+border-radius:20px;
+box-shadow:0 20px 60px rgba(0,0,0,0.8);
+transition:0.5s;
+}
+
+.block img:hover{transform:scale(1.05);}
+
+.text p{margin-bottom:22px;color:#d9d9d9;font-size:17px;}
+
+/* BUTTON */
+.button{
+margin-top:25px;
+padding:14px 28px;
+background:#00ff88;
+border:none;
+border-radius:30px;
+font-size:15px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.button:hover{transform:scale(1.08);}
+
+/* POPUP */
+.popup{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.85);
+display:none;
+justify-content:center;
+align-items:center;
+z-index:2000;
+}
+
+.popup-content{
+background:#0e141b;
+padding:40px;
+border-radius:20px;
+max-width:700px;
+text-align:center;
+animation:fadeIn 0.6s ease;
+}
+
+.popup-content h2{color:#00ff88;margin-bottom:20px;}
+.popup-content p{color:#e3e3e3;font-size:16px;}
+
+.close{
+margin-top:20px;
+padding:10px 25px;
+background:#00ff88;
+border:none;
+border-radius:20px;
+cursor:pointer;
+}
+
+/* TIMELINE */
+.timeline{margin-top:80px;}
+.timeline-item{
+background:#0f151c;
+padding:35px;
+border-radius:20px;
+margin-bottom:40px;
+transition:0.4s;
+}
+.timeline-item:hover{transform:scale(1.02);}
+.timeline-item h3{color:#00ff88;margin-bottom:10px;}
+.timeline-item p{color:#d9d9d9;}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:50px;
+background:#05080c;
+border-top:1px solid rgba(255,255,255,0.08);
+}
+
+@media(max-width:900px){
+.block{grid-template-columns:1fr;}
+.hero h1{font-size:42px;}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<h1>HK416</h1>
+<ul>
+<li><a href="index.html">Start</a></li>
+<li><a href="technik.html">Technik</a></li>
+<li><a href="geschichte.html">Geschichte</a></li>
+<li><a href="Einsätze.html">Einsätze</a></li>
+<li><a href="Erfahrungen.html">Erfahrungen</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+<h1>Die Geschichte des HK416</h1>
+<p>Diese Seite zeigt die komplette Entwicklung des HK416 von der ersten Idee bis zur modernen Version. Durch Klicks können zusätzliche Informationen geöffnet werden und die Seite ist deutlich interaktiver aufgebaut als eine normale Textseite.</p>
+</section>
+
+<section>
+<h2>Der Anfang der Entwicklung</h2>
+
+<div class="block">
+<div class="text">
+<p>Die Entwicklung des HK416 begann in einer Zeit, in der moderne militärische Ausrüstung immer wichtiger wurde. Ziel war es, ein System zu entwickeln, das nicht nur technisch modern ist, sondern auch unter extremen Bedingungen zuverlässig funktioniert. Besonders wichtig war dabei die Funktionsfähigkeit bei Staub, Regen und sehr hohen Temperaturen.</p>
+
+<p>Das ursprüngliche Ziel war nicht, ein komplett neues System zu entwickeln, sondern ein bestehendes Konzept zu verbessern. Dadurch konnten viele Vorteile beibehalten werden, während gleichzeitig moderne technische Lösungen integriert wurden. Besonders das neue Gassystem spielte dabei eine große Rolle.</p>
+
+<p>Durch diese Entwicklung entstand Schritt für Schritt ein modernes Sturmgewehr, das heute als eines der bekanntesten Beispiele moderner Militärtechnik gilt.</p>
+
+<button class="button" onclick="openPopup()">Mehr Details anzeigen</button>
+</div>
+
+<img src="bilder/hk4165.jpg">
+</div>
+</section>
+
+<section>
+<h2>Weiterentwicklung und Tests</h2>
+
+<div class="block">
+<img src="bilder/hk4166.jpg">
+
+<div class="text">
+<p>Nach der ersten Entwicklungsphase begann eine lange Testphase. In dieser Phase wurde das System unter verschiedenen Bedingungen getestet. Besonders wichtig waren Tests bei extremen Temperaturen und in sehr staubigen Umgebungen. Ziel war es zu überprüfen, ob das neue System wirklich zuverlässiger ist als ältere Modelle.</p>
+
+<p>Während dieser Tests wurden viele Verbesserungen vorgenommen. Einzelne Bauteile wurden verändert, das Gassystem wurde weiter optimiert und auch die Ergonomie wurde angepasst. Dadurch entstand ein modernes System, das sowohl technisch als auch praktisch überzeugt.</p>
+
+<p>Diese Phase der Entwicklung war besonders wichtig, weil sie gezeigt hat, dass moderne Technik und praktische Anwendung miteinander kombiniert werden können.</p>
+</div>
+</div>
+</section>
+
+<section>
+<h2>Zeitleiste der Entwicklung</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<h3>2000 – Beginn der Entwicklung</h3>
+<p>Start der Entwicklung eines neuen Systems mit höherer Zuverlässigkeit und moderner Technik.</p>
+</div>
+
+<div class="timeline-item">
+<h3>2004 – Erste Tests</h3>
+<p>Das neue System wird unter verschiedenen Bedingungen getestet und weiter verbessert.</p>
+</div>
+
+<div class="timeline-item">
+<h3>2007 – Internationale Vorstellung</h3>
+<p>Das HK416 wird offiziell vorgestellt und beginnt sich weltweit zu verbreiten.</p>
+</div>
+
+<div class="timeline-item">
+<h3>Heute – Moderne Versionen</h3>
+<p>Heute gilt das HK416 als eines der modernsten Sturmgewehre und wird weltweit verwendet.</p>
+</div>
+
+</div>
+</section>
+
+<footer>
+<p>Interaktive Geschichtsseite des HK416</p>
+</footer>
+
+<!-- POPUP -->
+<div class="popup" id="popup">
+<div class="popup-content">
+<h2>Zusätzliche Informationen</h2>
+<p>Hier sehen sie ein Ausführliches Video zum HK416.</p>
+<video width="100%" controls>
+<source src="video/hk416.mp4" type="video/mp4">
+Dein Browser unterstützt kein Video.
+</video>
+<button class="close" onclick="closePopup()">Schließen</button>
+</div>
+</div>
+
+<script>
+function openPopup(){
+document.getElementById("popup").style.display = "flex";
+}
+
+function closePopup(){
+document.getElementById("popup").style.display = "none";
+}
+</script>
+
+</body>
+</html>

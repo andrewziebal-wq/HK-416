@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HK416 Einsätze</title>
+
+<style>
+body{
+font-family: Arial, sans-serif;
+background:#0b0f14;
+color:white;
+margin:0;
+}
+
+nav{
+background:black;
+padding:20px;
+text-align:center;
+position:sticky;
+top:0;
+}
+
+nav a{
+color:white;
+margin:0 20px;
+text-decoration:none;
+font-size:18px;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#00ff88;
+}
+
+section{
+padding:80px 15%;
+position:relative;
+z-index:2;
+}
+
+/* VIDEO BACKGROUND */
+.bg-video{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+object-fit:cover;
+z-index:0;
+opacity:0.25;
+}
+
+
+h1{font-size:50px;margin-bottom:20px;}
+h2{font-size:35px;margin-bottom:15px;color:#00ff88;}
+
+img{
+width:280px;
+margin-top:20px;
+border-radius:12px;
+transition:0.4s;
+}
+
+img:hover{
+transform:scale(1.05);
+}
+
+img:hover{
+transform:scale(1.03);
+}
+
+.button{
+margin-top:25px;
+padding:15px 30px;
+font-size:16px;
+border:none;
+border-radius:25px;
+background:#00ff88;
+cursor:pointer;
+transition:0.3s;
+}
+
+.button:hover{
+transform:scale(1.05);
+}
+
+/* GRID SEKTION */
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+.card{
+background:#111;
+padding:25px;
+border-radius:20px;
+transition:0.4s;
+cursor:pointer;
+}
+
+.card:hover{
+transform:translateY(-8px) scale(1.02);
+background:#00ff8822;
+}
+
+/* POPUP */
+.popup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.85);
+justify-content:center;
+align-items:center;
+z-index:999;
+}
+
+.popup-box{
+background:#111;
+padding:40px;
+border-radius:20px;
+max-width:700px;
+text-align:center;
+animation:fade 0.4s ease;
+}
+
+@keyframes fade{
+from{opacity:0;transform:scale(0.9);} 
+to{opacity:1;transform:scale(1);} 
+}
+
+.close{
+margin-top:20px;
+padding:12px 25px;
+background:#00ff88;
+border:none;
+border-radius:20px;
+cursor:pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<video autoplay muted loop class="bg-video">
+<source src="video/einsatz.mp4" type="video/mp4">
+</video>
+
+<nav>
+<a href="index.html">Start</a>
+<a href="technik.html">Technik</a>
+<a href="geschichte.html">Geschichte</a>
+<a href="Einsätze.html">Einsätze</a>
+
+</nav>
+
+<section>
+<h1>HK416 Einsätze weltweit</h1>
+
+<p>Das HK416 wird weltweit von militärischen Einheiten eingesetzt. Besonders bekannt wurde es durch Spezialeinheiten, die ein extrem zuverlässiges und präzises System benötigen. Durch seine moderne Technik funktioniert es auch unter schwierigen Bedingungen wie Hitze, Regen oder Staub.</p>
+
+
+
+<p>Viele militärische Einheiten nutzen das HK416 bei Einsätzen, bei denen schnelle Reaktion und Präzision besonders wichtig sind. Durch die stabile Bauweise und das moderne System gilt es heute als eines der bekanntesten modernen Sturmgewehre.</p>
+
+<button class="button" onclick="document.getElementById('popup1').style.display='flex'">
+Mehr Infos zum Einsatz anzeigen
+</button>
+
+</section>
+
+<!-- KARTEN MIT INTERAKTION -->
+
+<section>
+<h2>Bekannte Einsatzbereiche</h2>
+
+<div class="cards">
+
+<div class="card" onclick="showText(1)">
+<h3>Spezialeinheiten</h3>
+<p>Klicke hier um mehr zu erfahren</p>
+</div>
+
+<div class="card" onclick="showText(2)">
+<h3>Städtische Einsätze</h3>
+<p>Klicke hier um mehr zu erfahren</p>
+</div>
+
+<div class="card" onclick="showText(3)">
+<h3>Internationale Nutzung</h3>
+<p>Klicke hier um mehr zu erfahren</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- BILDER SEKTION -->
+
+<section>
+<h2>Bilder aus Einsätzen</h2>
+
+<div style="display:flex;flex-wrap:wrap;gap:25px;justify-content:center;margin-top:30px;">
+
+<img src="bilder/einsatz2.jpg">
+<img src="bilder/einsatz3.jpg">
+<img src="bilder/einsatz4.jpg">
+<img src="bilder/einsatz1.jpg">
+
+</div>
+
+</section>
+
+<!-- POPUP 1 -->
+<div class="popup" id="popup1">
+<div class="popup-box">
+<h2>Zusätzliche Informationen</h2>
+
+<p>Das HK416 wurde speziell für moderne militärische Einsätze entwickelt. Es kombiniert Präzision, Zuverlässigkeit und eine stabile Bauweise. Besonders in Einsätzen, bei denen schnelle Reaktion und maximale Sicherheit wichtig sind, wird dieses System verwendet.</p>
+
+<button class="close" onclick="document.getElementById('popup1').style.display='none'">Schließen</button>
+
+</div>
+</div>
+
+<!-- POPUP TEXT WECHSEL -->
+<div class="popup" id="popupText">
+<div class="popup-box" id="popupContent">
+</div>
+</div>
+
+<script>
+function showText(n){
+let text = "";
+
+if(n==1){
+text = "<h2>Spezialeinheiten</h2><p>Das HK416 wird besonders häufig von Spezialeinheiten eingesetzt. Der Grund ist die hohe Zuverlässigkeit und Präzision. Diese Einheiten brauchen ein System, das auch unter extremen Bedingungen funktioniert.</p><button class='close' onclick=\"closePopup()\">Schließen</button>";
+}
+
+if(n==2){
+text = "<h2>Städtische Einsätze</h2><p>In städtischen Einsätzen ist Präzision besonders wichtig. Das HK416 eignet sich dafür, weil es sehr stabil ist und sich gut kontrollieren lässt.</p><button class='close' onclick=\"closePopup()\">Schließen</button>";
+}
+
+if(n==3){
+text = "<h2>Internationale Nutzung</h2><p>Das HK416 wird weltweit von verschiedenen militärischen Einheiten genutzt. Dadurch gehört es heute zu den bekanntesten modernen militärischen Systemen.</p><button class='close' onclick=\"closePopup()\">Schließen</button>";
+}
+
+
+ document.getElementById('popupContent').innerHTML = text;
+ document.getElementById('popupText').style.display='flex';
+}
+
+function closePopup(){
+ document.getElementById('popupText').style.display='none';
+}
+</script>
+
+</body>
+</html>

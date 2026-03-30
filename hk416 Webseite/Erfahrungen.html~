@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meine Erfahrungen mit dem HK416</title>
+
+<style>
+body{
+font-family: Arial, sans-serif;
+background:#0b0f14;
+color:white;
+margin:0;
+}
+
+nav{
+background:black;
+padding:20px;
+text-align:center;
+}
+
+nav a{
+color:white;
+margin:0 20px;
+text-decoration:none;
+font-size:18px;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#00ff88;
+}
+
+section{
+padding:80px 12%;
+}
+
+h1{font-size:50px;margin-bottom:20px;}
+h2{font-size:32px;margin-top:40px;color:#00ff88;}
+
+/* 2 SPALTEN LAYOUT */
+.container{
+display:flex;
+gap:50px;
+flex-wrap:wrap;
+align-items:flex-start;
+}
+
+.text{
+flex:1;
+min-width:320px;
+}
+
+.video{
+flex:1;
+min-width:320px;
+}
+
+.video video{
+width:100%;
+border-radius:15px;
+box-shadow:0 0 25px rgba(0,255,136,0.2);
+}
+
+/* TEXT DESIGN */
+p{
+font-size:18px;
+line-height:1.7;
+margin-bottom:20px;
+}
+
+.box{
+background:#111;
+padding:30px;
+border-radius:20px;
+margin-top:30px;
+}
+
+/* BUTTON */
+.button{
+margin-top:25px;
+padding:15px 30px;
+font-size:16px;
+border:none;
+border-radius:25px;
+background:#00ff88;
+cursor:pointer;
+transition:0.3s;
+}
+
+.button:hover{
+transform:scale(1.05);
+}
+
+/* POPUP */
+.popup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.85);
+justify-content:center;
+align-items:center;
+}
+
+.popup-box{
+background:#111;
+padding:40px;
+border-radius:20px;
+max-width:600px;
+text-align:center;
+}
+
+.close{
+margin-top:20px;
+padding:12px 25px;
+background:#00ff88;
+border:none;
+border-radius:20px;
+cursor:pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">Start</a>
+<a href="technik.html">Technik</a>
+<a href="geschichte.html">Geschichte</a>
+<a href="Einsätze.html">Einsätze</a>
+<a href="erfahrungen.html">Erfahrungen</a>
+</nav>
+
+<section>
+<h1>Meine Erfahrungen mit dem HK416</h1>
+
+<div class="container">
+
+<!-- TEXT LINKS -->
+<div class="text">
+
+<p>Ich habe das HK416 selbst geschossen, da ich ein Jahr bei der Bundeswehr war. In dieser Zeit hatte ich die Möglichkeit, verschiedene Waffen zu testen und direkt zu vergleichen. Dadurch konnte ich mir eine eigene Meinung über das HK416 bilden und nicht nur Informationen aus dem Internet übernehmen.</p>
+
+<p>Mein erster Eindruck war sehr positiv. Das HK416 fühlt sich sehr stabil an und wirkt deutlich moderner als viele ältere Systeme. Besonders beim Schießen merkt man schnell, dass die Waffe sehr präzise ist und sich gut kontrollieren lässt. Auch nach mehreren Schüssen bleibt das Gefühl sehr konstant, was besonders wichtig ist.</p>
+
+<p>Ein weiterer Punkt, der mir aufgefallen ist, ist die Zuverlässigkeit. Gerade beim Training oder auf dem Schießstand ist es wichtig, dass eine Waffe immer gleich funktioniert. Das HK416 hat hier einen sehr guten Eindruck gemacht und hat sich sehr zuverlässig angefühlt.</p>
+
+</div>
+
+<!-- VIDEO RECHTS -->
+<div class="video">
+
+<video controls>
+<source src="video/mein_schiessstand_video.mp4" type="video/mp4">
+</video>
+
+</div>
+
+</div>
+
+
+<h2>Mein Vergleich mit dem G36</h2>
+
+<div class="container">
+
+<div class="text">
+<div class="box">
+
+<p>Auch wenn mir das HK416 sehr gut gefallen hat, finde ich persönlich nicht, dass es besser ist als das G36. Beide Systeme haben ihre eigenen Vorteile. Das HK416 wirkt moderner und stabiler, aber das G36 lässt sich meiner Meinung nach einfacher handhaben und fühlt sich leichter an.</p>
+
+<p>Beim Schießen hatte ich das Gefühl, dass beide sehr präzise sind. Der Unterschied ist also nicht so groß, wie viele denken. Am Ende kommt es auch stark darauf an, womit man selbst besser klarkommt. Deshalb würde ich sagen, dass das HK416 sehr gut ist, aber nicht unbedingt besser als das G36.</p>
+
+</div>
+</div>
+
+<div class="video">
+
+<video controls>
+<source src="video/g36_schiessstand_video.mp4" type="video/mp4">
+</video>
+
+</div>
+
+</div>
+
+
+<h2>Meine persönliche Meinung</h2>
+
+<div class="box" style="max-width:900px;margin:auto;">
+
+<p>Insgesamt hat mir das HK416 sehr gut gefallen. Es fühlt sich modern an, ist sehr präzise und wirkt sehr zuverlässig. Trotzdem finde ich es wichtig zu sagen, dass das G36 meiner Meinung nach nicht schlechter ist. Beide Systeme sind sehr gut, und am Ende entscheidet die persönliche Erfahrung.</p>
+
+<p>Durch meine eigene Erfahrung auf dem Schießstand konnte ich beide Systeme besser vergleichen als nur durch Informationen aus dem Internet. Das HK416 hat definitiv viele Vorteile, aber das G36 fühlt sich meiner Meinung nach einfacher und angenehmer an. Deshalb würde ich sagen, dass beide sehr gut sind und es eher auf die persönliche Meinung ankommt.</p>
+
+<button class="button" onclick="document.getElementById('popup').style.display='flex'">
+Meine komplette Meinung anzeigen
+</button>
+
+</div>
+
+</section>
+
+
+<!-- POPUP -->
+<div class="popup" id="popup">
+<div class="popup-box">
+<h2>Meine Erfahrung zusammengefasst</h2>
+
+<p>Ich habe das HK416 selbst geschossen und kann deshalb sagen, dass es eine sehr gute und moderne Waffe ist. Besonders die Präzision und die Stabilität haben mir sehr gefallen. Trotzdem finde ich persönlich nicht, dass es besser als das G36 ist. Beide sind sehr gute Systeme und der Unterschied ist nicht so groß, wie viele denken.</p>
+
+<button class="close" onclick="document.getElementById('popup').style.display='none'">
+Schließen
+</button>
+
+</div>
+</div>
+
+</body>
+</html>
